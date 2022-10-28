@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <rel link="stylesheet" href="/assets/normalize.css"></rel>
+    <rel link="stylesheet" href="/assets/style.css"></rel>
+    
+    <title>Portfolio</title>
+</head>
+
+
+
+<header>
+    <!-- Image which displays a photo and text -->
+    <div class="hero"> 
+        <div class="hero-txt">
+            <h1>KARL HUBIG</h1>
+            <p>Full Stack Web Developer</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <ul>
+            <li>
+                <a href="#about">About Me</a> <!-- Is class or id required for jumping from the navbar? -->
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <!-- Professional Life -->
+        <div id="professional">
+            <h3>Professional Life</h3>
+            <p>Since I was born I have always thought of myself as a professional waiting to happen. Hasn't happened yet, but I'm sure it will.</p>
+        </div>
+        
+        <!-- Personal Life -->
+        <div id="personal">
+            <h3>Personal Life</h3>
+            <p>Since I was born I have always thought of myself as a person. This belief has made me push myself towards performing normal human behaviors at all times.</p>
+        </div>
+        
+        <!-- Photo of Me -->
+        <picture id="photo-of-me">
+            <img src="/assets/img/me.png" 
+                alt="Image of Karl, the web developer.">
+            <p>Believe it or not, web developers can look this good.</p>
+                <!-- replace with actual photo eventually -->
+        </picture>
+    </section>
+    
+    <!-- Project Section -->
+    <section id="projects">
+
+        <!-- This section has two subdivisions: The first being a "Featured" card on the left, the other being an "Other projects" card on the right (and then the different projects stacked in a list). Upon page resize the Featured Card should flex ABOVE the Other Projects card, since it is more important. -->
+
+        <card id="featured">
+            <h2>Featured</h2>
+            <img src="/assets/img/featured-bg.png" alt=""> <!-- Replace with free stock photo -->
+            <p>Image with Title and Description Showcasing Featured Project.</p>
+        </card>
+
+        <card id="other-projects">
+            <h2>Other Projects</h2>
+            <ul> <!-- Better way to do this than a list? -->
+                <li><a href="">Reinventing The Internet</a></li>
+                <li><a href="">Flying to The Moon</a></li>
+                <li><a href="">Simple Alchemy For The Working Man</a></li>
+            </ul>
+        </card>
+    </section>
+    
+    <section id="contact">
+        <h3>Contact</h3>
+
+        <address> <!-- indicates the following provides contact information. -->
+            <ul> <!-- Is this list really necessary? -->
+                <li><a href="mailto:hubigkarl@gmail.com">Contact by email: hubigkarl@gmail.com</a></li>
+                <li><a href="tel:+11111111111">Leave a voicemail: (111) 111-1111</a></li>
+            </ul>
+        </address>
+
+    </section>
+</body>
+
+
+
+<footer>
+<h3>&#169; Copyright 2022 by Karl Hubig. All Rights Reserved.</h3>
+</footer>
+
+</html>
