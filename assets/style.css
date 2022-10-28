@@ -1,0 +1,26 @@
+* {
+    font-size: 14px;
+}
+
+header {
+    background-color: aqua;
+    color: black;
+    text-align: center;
+}
+
+h1 { /* only header on the website. */
+    font-size: 400%;
+    color: purple;
+}
+
+nav {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 1%;
+    border: 0.1rem dotted blue;
+    padding: 0 1%;
+}
+
