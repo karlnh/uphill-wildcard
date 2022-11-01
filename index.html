@@ -12,64 +12,70 @@
 </head>
 
 
-
+<!-- ########## HEADER ########## -->
 <header>
-    <h1>KARL HUBIG</h1>
-    <p>Full Stack Web Developer</p>
+    <span>
+        <h1>KARL HUBIG</h1>
+        <p>Full Stack Web Developer</p>
+    </span>
             
     <!-- Navigation Bar -->
     <nav> 
         <ul>
             <li>
-                <a href="#about">About Me</a>
+                <a href="#about-section">About Me</a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#project-section">Projects</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact-section">Contact</a>
             </li>
         </ul>
     </nav>
 </header>
 
 
-
+<!-- ########## BODY ########## -->
 <body>
     <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-
-        <!-- Professional Life -->
-        <div id="professional">
-            <h3>Professional Life</h3>
-            <p>Since I was born I have always thought of myself as a professional waiting to happen. Hasn't happened yet, but I'm sure it will.</p>
-        </div>
+    <main id="about-section">
         
-        <!-- Personal Life -->
-        <div id="personal">
-            <h3>Personal Life</h3>
-            <p>Since I was born I have always thought of myself as a person. This belief has made me push myself towards performing normal human behaviors at all times.</p>
-        </div>
-        
+        <section id="about-cards">
+            <h2>About Me</h2>
+            <!-- Professional Life -->
+            <div id="about-cards-text">
+                <div id="about-professional">
+                    <h3>Professional Life</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                
+                <!-- Personal Life -->
+                <div id="about-personal">
+                    <h3>Personal Life</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>    
         <!-- Photo of Me -->
-        <picture id="photo-of-me">
-            <img src="/assets/img/me.png" 
+        <figure id="photo-of-me">
+            <img src="./assets/img/me.png" 
                 alt="Image of Karl, the web developer.">
-            <p>Believe it or not, web developers can look this good.</p>
+            <figcaption>Believe it or not, web developers can look this good.</figcaption>
                 <!-- replace with actual photo eventually -->
-        </picture>
-    </section>
+        </figure>
+    </main>
     
     <!-- Project Section -->
-    <section id="projects">
+    <main id="project-section">
 
         <!-- This section has two subdivisions: The first being a "Featured" card on the left, the other being an "Other projects" card on the right (and then the different projects stacked in a list). Upon page resize the Featured Card should flex ABOVE the Other Projects card, since it is more important. -->
 
         <card id="featured">
             <h2>Featured</h2>
-            <img src="/assets/img/featured-bg.png" alt=""> <!-- Replace with free stock photo -->
-            <p>Image with Title and Description Showcasing Featured Project.</p>
+            <img src="https://via.placeholder.com/400" alt=""> <!-- Replace with actual image -->
+            <p>Image with Title and Description Showcasing Featured Project. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </card>
 
         <card id="other-projects">
@@ -80,9 +86,9 @@
                 <li><a href="">Simple Alchemy For The Working Man</a></li>
             </ul>
         </card>
-    </section>
+    </main>
     
-    <section id="contact">
+    <main id="contact-section">
         <h3>Contact</h3>
 
         <address> <!-- indicates the following provides contact information. -->
@@ -92,7 +98,7 @@
             </ul>
         </address>
 
-    </section>
+    </main>
 </body>
 
 

@@ -1,26 +1,226 @@
-* {
-    font-size: 14px;
+:root {
 }
+
+* {
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+h1 {
+    font-size: 400%;
+}
+
+h2 {
+    font-size: 300%;
+}
+
+h3 {
+    font-size: 200%;
+}
+
+h2, h3, h4 {
+    font-family: monospace;
+}
+
+main, footer {
+    padding: 0 5%; /* padding on the sides of the main content body */
+}
+
+
+/* ########## HEADER ########## */
+/* ########## HEADER ########## */
+/* ########## HEADER ########## */
+
+
+
 
 header {
-    background-color: aqua;
-    color: black;
-    text-align: center;
+    background-image: linear-gradient(to right, #f1d0b4, white, #f1d0b4); /* decided a fun little gradient might be better. */
+    margin-bottom: 0.5%;
 }
 
-h1 { /* only header on the website. */
-    font-size: 400%;
-    color: purple;
+header span {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* elements are organized at the start of the flexbox */
+    align-items: center; /* Centers sub-title */
+    padding: 1% 2%;
+    
+}
+
+header h1 { /* only header on the website. */
+    color: rgb(255, 100, 0);
+    /* border-top: 0.5rem dotted rgb(255, 100, 0); */ /* where can i use this??? i like it */
+    
+}
+
+header p {
+    margin: 0 1%;
+    font-size: 150%;
+    color: rgb(255, 100, 0);;
+    
+    
 }
 
 nav {
     text-align: center;
+
+    font-family: monospace;
+    text-transform: uppercase;
+    
+
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; /* spaces the content of the nav bar */
+
+    gap: 1%;
     list-style-type: none;
+    
+    
 }
 
 nav ul li {
-    margin: 1%;
-    border: 0.1rem dotted blue;
-    padding: 0 1%;
+    display: inline;
+    min-width: 30%; /* seems to allow wrapping with slimmer screens. without it, the links just squish in a row. */
+    margin: 0.5%;
+
+    background-color: white;
+    font-size: 200%;
+
+    border: 0.5rem inset #8e7766;
+    border-radius: 5rem;
+    
 }
 
+/* ########## DESCRIPTION BOX ########## */
+/* ########## DESCRIPTION BOX ########## */
+/* ########## DESCRIPTION BOX ########## */
+
+#about-section { /* flex settings for text + picture */
+    display: flex;
+    flex-flow: row;
+    
+    
+}
+
+#about-cards {
+    max-width: 75%;
+    padding-right: 2%;
+    text-align: justify;
+}
+
+#about-cards h2 { /* about section title */
+    padding: 2%;
+    text-align: center;
+    
+}
+
+#about-cards h3 {
+    font-size: 200%;
+}
+
+#about-cards-text {
+    display: flex;
+    flex-flow: row;
+
+    gap: 2%;
+
+
+}
+
+#photo-of-me {
+    margin: 1%;
+
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 400px; /* makes sure viewport doesn't stretch the image to horrible proportions */
+    max-width: 400px;
+    
+    
+
+}
+
+/* ########## PROJECTS ########## */
+/* ########## PROJECTS ########## */
+/* ########## PROJECTS ########## */
+
+#project-section {
+    display: flex;
+    flex-flow: row;
+    max-width: 100%;
+}
+
+#featured {
+    display: flex;
+    flex-flow: column;
+}
+
+#other-projects {
+    display: flex;
+    flex-flow: column;
+
+    list-style-type: none;
+    
+}
+
+
+/* ########## DISPLAY-RELATIVE ########## */
+/* ########## DISPLAY-RELATIVE ########## */
+/* ########## DISPLAY-RELATIVE ########## */
+
+/* Tablets - header changes color */
+
+@media screen and (max-width: 1000px) {
+    main {
+        padding: 8%;
+    }
+
+    #about-section {
+        flex-flow: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+
+    #about-cards {
+        padding: 0;
+        max-width: 85%;
+        
+        
+    }
+
+    #about-cards-text {
+        flex-flow: column;
+    }
+
+    #photo-of-me {
+        padding: 5%;
+    }
+    #photo-of-me p {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    nav ul {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    nav ul li {
+        min-width: 80%;
+    }
+  }
+
+@media screen and (max-width: 650px) {
+    header span {
+        flex-flow: column wrap;
+    }
+    
+}
