@@ -14,7 +14,7 @@
 
 <!-- ########## HEADER ########## -->
 <header>
-    <span>
+    <span id="titlebox">
         <h1>KARL HUBIG</h1>
         <p>Full Stack Web Developer</p>
     </span>
@@ -22,81 +22,93 @@
     <!-- Navigation Bar -->
     <nav> 
         <ul>
-            <li>
+            <li class="nav-links">
                 <a href="#about-section">About Me</a>
             </li>
-            <li>
-                <a href="#project-section">Projects</a>
+            <li class="nav-links">
+                <a href="#project-main">Projects</a>
             </li>
-            <li>
+            <li class="nav-links">
                 <a href="#contact-section">Contact</a>
             </li>
         </ul>
     </nav>
 </header>
 
-
 <!-- ########## BODY ########## -->
 <body>
     <!-- About Section -->
     <main id="about-section">
         
-        <section id="about-cards">
+        <section id="about-description">
             <h2>About Me</h2>
             <!-- Professional Life -->
-            <div id="about-cards-text">
-                <div id="about-professional">
+            <div id="about-description-cards">
+                <card class="about-card">
                     <h3>Professional Life</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                </card>
                 
                 <!-- Personal Life -->
-                <div id="about-personal">
+                <card class="about-card">
                     <h3>Personal Life</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                </card>
             </div>
-        </section>    
-        <!-- Photo of Me -->
-        <figure id="photo-of-me">
-            <img src="./assets/img/me.png" 
-                alt="Image of Karl, the web developer.">
-            <figcaption>Believe it or not, web developers can look this good.</figcaption>
-                <!-- replace with actual photo eventually -->
-        </figure>
+        </section>
+        <div id="photo-container">
+            <img id="photo-of-me" src="./assets/img/me.jpg" 
+            alt="Image of Karl, the web developer."> <!-- Photo of Me -->
+        </div>    
+        
     </main>
     
     <!-- Project Section -->
-    <main id="project-section">
 
-        <!-- This section has two subdivisions: The first being a "Featured" card on the left, the other being an "Other projects" card on the right (and then the different projects stacked in a list). Upon page resize the Featured Card should flex ABOVE the Other Projects card, since it is more important. -->
+    <main id="project-main">
+        <h2>Projects</h2>
+        <section id="project-section">
 
-        <card id="featured">
-            <h2>Featured</h2>
-            <img src="https://via.placeholder.com/400" alt=""> <!-- Replace with actual image -->
-            <p>Image with Title and Description Showcasing Featured Project. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </card>
+            <card class="project-card" id="featured-project"> <!-- Featured Project -->
+                <h3>Featured Project</h3>
+                
+                <a href="https://karlnh.github.io/marbling-flight/" class="feature-img-txt">
+                    <div>
+                        <img src="https://via.placeholder.com/800x350">
+                        <p style="font-size: 150%" >Module 1 Website</p>
+                    </div>
+                    
+                </a>
+                
+            </card>
 
-        <card id="other-projects">
-            <h2>Other Projects</h2>
-            <ul> <!-- Better way to do this than a list? -->
-                <li><a href="">Reinventing The Internet</a></li>
-                <li><a href="">Flying to The Moon</a></li>
-                <li><a href="">Simple Alchemy For The Working Man</a></li>
-            </ul>
-        </card>
+            <card class="project-card"> <!-- Other Projects -->
+                <h3>Other Projects</h3>
+                <ul id="project-nav">
+                    <li><a href="1"><img src="https://via.placeholder.com/800x100"></a>
+                    </li>
+                    
+                    <br> <!-- couldn't really tell how else to get a nice space going here. my CSS-fu was too weak. -->
+                    
+                    <li><a href="2"><img src="https://via.placeholder.com/800x100"></a>
+                    </li>
+                    
+                    <br>
+                    
+                    <li><a href="3"><img src="https://via.placeholder.com/800x100"></a>
+                    </li>
+                </ul>
+            </card>
+        </section>
     </main>
     
     <main id="contact-section">
-        <h3>Contact</h3>
-
-        <address> <!-- indicates the following provides contact information. -->
-            <ul> <!-- Is this list really necessary? -->
-                <li><a href="mailto:hubigkarl@gmail.com">Contact by email: hubigkarl@gmail.com</a></li>
-                <li><a href="tel:+11111111111">Leave a voicemail: (111) 111-1111</a></li>
+        <h2>Contact:</h2>
+            <ul style="font-size: 150%">
+                <li><a href="mailto:email@gmail.com">email: email@gmail.com</a></li>
+                <li><a href="https://github.com/karlnh">github: karlnh</a></li>
             </ul>
-        </address>
 
     </main>
 </body>
@@ -104,9 +116,9 @@
 
 
 <footer>
-    <h3>
-        &#169; Copyright 2022 by Karl Hubig. All Rights Reserved.
-    </h3>
+    <p>
+        &#169; Copyright 2022 Karl Hubig. All Rights Reserved.
+    <p>
 </footer>
 
 </html>

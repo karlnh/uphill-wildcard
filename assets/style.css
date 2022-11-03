@@ -1,12 +1,14 @@
 :root {
-}
+    /* declare a variable with `--` syntax */
+    --border: 0.5rem inset #ff6400;
+  }
 
 * {
     font-family: sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* smooth scroll when clicking nav links */
   }
 
 h1 {
@@ -15,44 +17,39 @@ h1 {
 
 h2 {
     font-size: 300%;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 h3 {
     font-size: 200%;
 }
 
-h2, h3, h4 {
-    font-family: monospace;
-}
-
-main, footer {
-    padding: 0 5%; /* padding on the sides of the main content body */
+main, footer {   
+    margin: 0 8%;
 }
 
 
 /* ########## HEADER ########## */
 /* ########## HEADER ########## */
 /* ########## HEADER ########## */
-
-
-
 
 header {
-    background-image: linear-gradient(to right, #f1d0b4, white, #f1d0b4); /* decided a fun little gradient might be better. */
-    margin-bottom: 0.5%;
+    background-image: linear-gradient(to right, #f1d0b4, white, #f1d0b4);
 }
 
-header span {
+#titlebox {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center; /* elements are organized at the start of the flexbox */
-    align-items: center; /* Centers sub-title */
-    padding: 1% 2%;
+    justify-content: center; /* centers title+sub-title horizontally */
+    align-items: center; /* Centers sub-title vertically */
+    padding: 1% 2% 0.5% 2%;
     
 }
 
 header h1 { /* only header on the website. */
-    color: rgb(255, 100, 0);
+    color: #ff6400;
     /* border-top: 0.5rem dotted rgb(255, 100, 0); */ /* where can i use this??? i like it */
     
 }
@@ -61,39 +58,30 @@ header p {
     margin: 0 1%;
     font-size: 150%;
     color: rgb(255, 100, 0);;
-    
-    
 }
 
-nav {
+nav { /* navigation bar */
     text-align: center;
-
     font-family: monospace;
     text-transform: uppercase;
-    
-
 }
 
-nav ul {
+nav ul { /* list style defaults to none per init.css */
     display: flex;
     flex-flow: row wrap;
     justify-content: center; /* spaces the content of the nav bar */
-
-    gap: 1%;
-    list-style-type: none;
-    
-    
+    gap: 0.5%; /* gap between nav elements */
 }
 
 nav ul li {
     display: inline;
-    min-width: 30%; /* seems to allow wrapping with slimmer screens. without it, the links just squish in a row. */
-    margin: 0.5%;
+    min-width: 28%;
+    margin: 0.5% 0;
 
     background-color: white;
     font-size: 200%;
 
-    border: 0.5rem inset #8e7766;
+    border: var(--border);
     border-radius: 5rem;
     
 }
@@ -104,123 +92,272 @@ nav ul li {
 
 #about-section { /* flex settings for text + picture */
     display: flex;
-    flex-flow: row;
-    
-    
+    flex-flow: row; /* no flex-wrap: wrap because more precision for flow is needed */
+    justify-content: space-evenly;
 }
 
-#about-cards {
-    max-width: 75%;
-    padding-right: 2%;
+#about-description {
+    max-width: 100%;
     text-align: justify;
 }
 
-#about-cards h2 { /* about section title */
-    padding: 2%;
-    text-align: center;
-    
-}
-
-#about-cards h3 {
+#about-description h3 {
     font-size: 200%;
 }
 
-#about-cards-text {
+#about-description-cards {
     display: flex;
     flex-flow: row;
-
     gap: 2%;
 
+    margin: 0 1% 1% 0; /* helps align about-card left margin with navbar margin */
 
+}
+
+#photo-container {
+    margin: 1%;
 }
 
 #photo-of-me {
-    margin: 1%;
-
-    min-height: 200px;
-    min-width: 200px;
-    max-height: 400px; /* makes sure viewport doesn't stretch the image to horrible proportions */
+    border-radius: 50%;
     max-width: 400px;
-    
-    
+    max-height: 400px;
 
+    align-content: center;
 }
 
 /* ########## PROJECTS ########## */
 /* ########## PROJECTS ########## */
 /* ########## PROJECTS ########## */
+
+#project-main {
+    margin-bottom: 3%;
+}
 
 #project-section {
     display: flex;
-    flex-flow: row;
-    max-width: 100%;
+    gap: 1%;
+    justify-content: left;
 }
 
-#featured {
+.project-card { /* Generic styling for both project cards */
+    width: 100%;
+}
+
+.project-card img {
+    border-radius: 0.5rem;
+    height: 100%;
+}
+
+#featured-project {
     display: flex;
     flex-flow: column;
 }
 
-#other-projects {
+.feature-img-txt {
     display: flex;
-    flex-flow: column;
+    height: 100%;
 
-    list-style-type: none;
-    
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: var(--border);
+    border-radius: 1rem;
 }
 
+.feature-img-txt img {
+    margin: auto;
+}
+
+.feature-img-txt > div {
+    position: relative;
+}
+
+.feature-img-txt div > p {
+    position: absolute;
+    bottom: 0%;
+
+    padding: 5%;
+}
+
+#project-nav li {
+    background-color:white;
+    border: var(--border);
+    border-radius: 1rem;
+}
+
+#project-nav img {
+    text-align: center;
+    margin: auto;
+}
+
+/* ########## CONTACT ########## */
+/* ########## CONTACT ########## */
+/* ########## CONTACT ########## */
+
+#contact-section {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+#contact-section ul {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    gap: 1%;
+
+}
+
+#contact-section ul li {
+    padding: 1rem;
+    width: 49.5%;
+    text-align: center;
+
+    background-color: white;
+    border: 0.25rem inset #ff6400;
+    border-radius: 5rem;
+
+
+
+}
+
+footer {
+    margin: 2%;
+    text-align: center;
+}
 
 /* ########## DISPLAY-RELATIVE ########## */
 /* ########## DISPLAY-RELATIVE ########## */
 /* ########## DISPLAY-RELATIVE ########## */
 
-/* Tablets - header changes color */
 
+/* Narrower screens */
 @media screen and (max-width: 1000px) {
-    main {
-        padding: 8%;
+
+    main, footer {   
+        margin: 0 4%;
+    }
+
+    h2, h3 {
+        font-weight: bold;
+    }
+
+    p, #contact-section ul {
+        font-size: 150%;
+    }
+
+    footer p {
+        font-size: 100%;
     }
 
     #about-section {
-        flex-flow: column-reverse;
         align-items: center;
         padding: 0;
     }
 
-    #about-cards {
+    #about-description {
         padding: 0;
-        max-width: 85%;
-        
-        
+        max-width: 100%;
+        text-align: left;
     }
 
-    #about-cards-text {
+    #about-description-cards {
         flex-flow: column;
+    }
+
+    #project-section { /* whole project section, including featured and other projects */
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
     }
 
     #photo-of-me {
         padding: 5%;
-    }
-    #photo-of-me p {
-        text-align: center;
+        margin-bottom: 0%;
     }
 
+    #contact-section ul li {
+        padding: 1.5rem;
+        margin: 0.5rem;
+        width: 75%;
+    }
 }
 
-@media screen and (max-width: 800px) {
+/* Tablet size */
+@media screen and (max-width: 810px) {
+
+    h2,
+    h3 {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    p, #contact-section ul {
+        font-size: 200%;
+    }
+
     nav ul {
         flex-flow: column wrap;
         align-items: center;
+
+        margin-top: 1%;
     }
     
     nav ul li {
         min-width: 80%;
     }
-  }
 
+    header {
+        padding: 2% 0 5% 0;
+    }
+
+    #about-section {
+        flex-flow: column-reverse;
+    }
+
+    #photo-of-me {
+        padding: 10%;
+        margin-bottom: 3%;
+    }
+
+    #contact-section {
+        flex-flow: column wrap;
+        margin-bottom: 2%;
+    }
+    
+    #contact-section ul {
+        flex-flow: row wrap;
+    }
+
+    #contact-section ul li {
+        width: 150%;
+    }
+}
+
+/* Phone size */
 @media screen and (max-width: 650px) {
-    header span {
+
+    #titlebox {
         flex-flow: column wrap;
     }
     
+    #contact-section ul li {
+        width: 100%;
+    }
+
+}
+
+/* ########## PSEUDO-CLASSES ########## */
+/* ########## PSEUDO-CLASSES ########## */
+/* ########## PSEUDO-CLASSES ########## */
+
+.nav-links:hover,
+.feature-img-txt:hover,
+#project-nav li:hover,
+#contact-section ul li:hover { /* Hovering changes color of boxes. Awesome! */
+    background-color:lightcoral;
+    box-shadow: 5px 5px 3px #b1b1b1;
 }
