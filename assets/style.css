@@ -57,7 +57,7 @@ header h1 { /* only header on the website. */
 header p {
     margin: 0 1%;
     font-size: 150%;
-    color: rgb(255, 100, 0);;
+    color: #ff6400;
 }
 
 nav { /* navigation bar */
@@ -219,9 +219,6 @@ nav ul li {
     background-color: white;
     border: 0.25rem inset #ff6400;
     border-radius: 5rem;
-
-
-
 }
 
 footer {
